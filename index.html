@@ -3,49 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name – Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Hassaan Siddiqui</title>
+  <style>
+    :root {
+      --text-color: #1a1a1a;
+      --link-color: #007acc;
+      --link-hover: #005f99;
+      --border-color: #ddd;
+      --bg-color: #fff;
+    }
+
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.7;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px 20px;
+      background: #fafafa;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+      color: #111;
+    }
+
+    header h3 {
+      color: #555;
+      margin: 10px 0 5px 0;
+      font-weight: normal;
+    }
+
+    header p {
+      margin-top: 0;
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    nav {
+      margin-top: 25px;
+    }
+
+    nav a {
+      margin: 0 20px;
+      text-decoration: none;
+      color: var(--link-color);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--link-hover);
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 60px auto;
+      padding: 0 25px;
+    }
+
+    section {
+      margin-bottom: 70px;
+    }
+
+    h2 {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 5px;
+      color: #222;
+      font-size: 1.6em;
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: #333;
+      font-size: 1.1em;
+    }
+
+    p {
+      text-align: justify;
+      margin-top: 8px;
+    }
+
+    footer {
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+      padding: 25px;
+      background-color: #fafafa;
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+      header {
+        padding: 40px 10px;
+      }
+      main {
+        margin: 40px 0;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Hassaan Siddiqui</h1>
+    <h3>PhD Student in Electrical Engineering and Computer Science</h3>
+    <p>Contact: hassaan@example.com</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#projects">Projects</a>
+      <a href="#misc">Miscellaneous</a>
+    </nav>
+  </header>
 
-<header>
-  <h1>Your Name</h1>
-  <h2>Your current title / role</h2>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#projects">Projects</a>
-    <a href="#misc">Miscellaneous</a>
-  </nav>
-</header>
+  <main>
+    <section id="about">
+      <h2>About</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer pretium, arcu sit amet feugiat sodales, justo purus ultrices nunc, non luctus sapien lorem non felis. Donec non posuere eros. Nulla facilisi.</p>
+      <p>Phasellus iaculis, sem nec egestas bibendum, odio elit ultricies augue, vel consequat nisl mi sit amet lorem. Proin at lorem quis sem tincidunt accumsan.</p>
+    </section>
 
-<section id="about">
-  <h3>About</h3>
-  <p>Your bio goes here.</p>
-</section>
+    <section id="research">
+      <h2>Research</h2>
+      <h3>Embedded Power Conversion Systems</h3>
+      <p>Aliquam tristique dignissim justo, sed gravida arcu imperdiet vel. Sed fringilla neque vitae urna volutpat, nec faucibus lorem fermentum.</p>
 
-<section id="research">
-  <h3>Research</h3>
-  <!-- Subsection(s) -->
-  <h4>Title of research project</h4>
-  <p>Description …</p>
-  <a href="link-to-pdf.pdf">[PDF]</a>
-  <img src="images/research1.jpg" alt="…">
-</section>
+      <h3>High Frequency Power Electronics</h3>
+      <p>Curabitur ac augue interdum, vehicula risus ut, facilisis nisi. Donec sit amet diam vel metus dictum blandit.</p>
+    </section>
 
-<section id="projects">
-  <h3>Projects</h3>
-  <!-- list your projects similarly -->
-</section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <h3>Autonomous Robot Platform</h3>
+      <p>Vivamus tempus dolor et lorem egestas, nec egestas risus porttitor. Integer nec efficitur magna. Sed vel arcu sed ligula consequat pretium.</p>
 
-<section id="misc">
-  <h3>Miscellaneous</h3>
-  <p>Other interests, side-projects etc.</p>
-</section>
+      <h3>Wireless Power Transfer System</h3>
+      <p>Sed et orci nec risus feugiat interdum. Nunc et luctus ligula. Vestibulum non purus ut nisl mattis dapibus.</p>
+    </section>
 
-<footer>
-  <p>© Year Your Name</p>
-</footer>
+    <section id="misc">
+      <h2>Miscellaneous</h2>
+      <p>Outside of engineering, I enjoy painting, reading about modern physics, and exploring new hiking trails. Nulla ac odio non mauris commodo consequat.</p>
+    </section>
+  </main>
 
+  <footer>
+    <p>© 2025 Hassaan Siddiqui | Built with ❤️ using GitHub Pages</p>
+  </footer>
 </body>
 </html>
